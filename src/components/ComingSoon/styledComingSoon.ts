@@ -44,10 +44,10 @@ export const ContentContainer = styled.div`
 export const Form = styled.form`
   display: flex;
   align-items: center;
-  width: clamp(17.5rem, 7vw, 30rem);
+  width: clamp(18.5rem, 7vw, 30rem);
 
   .MuiInputLabel-formControl {
-    font-size: clamp(0.5rem,2vw,1rem);
+    font-size: clamp(0.6rem,2vw,1rem);
     font-weight: 600;
     margin-left: 20px;
 
@@ -67,6 +67,7 @@ export const NotificationLabel = styled.label`
   font-weight: clamp(500,650,750);
   margin-bottom: clamp(1rem, 2vw, 2rem);
   width: 100px;
+  font-family: "Inter", sans-serif;
 `;
 
 export const EmailInput = styled(TextField)`
@@ -75,12 +76,11 @@ export const EmailInput = styled(TextField)`
   box-sizing: border-box;
 `;
 
-export const ButtonSubmit = styled(Button)`
+export const ButtonSubmit = styled.button`
   margin-left: 30px;
-  width: clamp(6rem, 6.2vw, 17rem);
-  height: clamp(2.1rem, 2.5vw, 3rem); 
-  font-size: clamp(0.4rem,0.7vw,0.7rem);
-  border-radius: 0.3125rem; /* 5px em rem */
+  width: clamp(7rem, 6.2vw, 17rem);
+  height: clamp(2.4rem, 3vw, 15rem);
+  font-size: clamp(0.6rem,0.7vw,0.7rem);
   border: none;
   cursor: pointer;
   background-color: #660708;
@@ -100,10 +100,9 @@ export const PageContainer = styled.div`
   overflow: hidden;
   position: relative;
 
-  /* Ajustes para diferentes tamanhos de tela */
   @media (min-width: 1300px) {
     .content__form{
-      width: 400px ;
+      width: 500px ;
     }
   }
 
@@ -144,7 +143,7 @@ export const PageContainer = styled.div`
     }
 
     .MuiInputBase-input{
-      padding: 0px;
+      padding: 4px;
     }
   }
 `;

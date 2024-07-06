@@ -16,7 +16,7 @@ import {
 import { Inter } from 'next/font/google';
 import { Box } from '@mui/material';
 
-const inter = Inter({ subsets: ['latin'], weight: ['300', '500', '700'] });
+const inter = Inter({ subsets: ['latin']});
 
 // Definir esquema de validação com yup
 const schema = yup.object().shape({
@@ -65,7 +65,7 @@ const ComingSoon: React.FC = () => {
             error={!!errors.email}
             helperText={errors.email ? errors.email.message : ''}
           />
-          <ButtonSubmit type="submit" className={`content__button ${inter.className}`} variant="contained">
+          <ButtonSubmit type="submit" className={`content__button ${inter.className}`}>
             Sign Up
           </ButtonSubmit>
         </Form>
