@@ -1,6 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useContext } from "react";
+
+import { ThemeContext } from "@/components/ThemeProvider/ThemeProvider";
 
 const startCirclePos = 84;
 const endCirclePos = 114;
@@ -10,13 +12,12 @@ const white = "#ffffff";
 const colorTransitionClasses = "cursor-pointer transition-colors ease-in-out";
 
 export default function Logo() {
-  const [circleCX, setCircleCX] = useState(startCirclePos);
-  const textColor = circleCX === startCirclePos ? black : white;
+  const { theme, setTheme } = useContext(ThemeContext);
+  const isLightTheme = theme === "light";
+  const textColor = isLightTheme ? black : white;
 
   const onToggleSwitch = () => {
-    setCircleCX((cx) =>
-      cx === startCirclePos ? endCirclePos : startCirclePos
-    );
+    setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
   };
 
   return (
@@ -31,15 +32,15 @@ export default function Logo() {
         fillOpacity="0.85"
         onClick={onToggleSwitch}
         className={colorTransitionClasses}
-        fill={circleCX === startCirclePos ? white : green}
+        fill={isLightTheme ? green : white}
         d="M58 34C58 21.2975 68.2975 11 81 11H117C129.703 11 140 21.2975 140 34V34C140 46.7025 129.703 57 117 57H81C68.2974 57 58 46.7025 58 34V34Z"
       />
       <circle
         r="18"
         cy="34"
-        cx={circleCX}
         onClick={onToggleSwitch}
-        fill={circleCX === startCirclePos ? black : white}
+        fill={isLightTheme ? white : black}
+        cx={isLightTheme ? endCirclePos : startCirclePos}
         className="transition-all ease-in-out cursor-pointer"
       />
       <path
