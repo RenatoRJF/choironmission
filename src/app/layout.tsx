@@ -1,14 +1,9 @@
 import type { Metadata } from "next";
-import { Nunito } from "next/font/google";
-import { PrimeReactProvider } from "primereact/api";
 
-import { CMMainTheme } from "@/config/themes/main";
+import RenderLayout from "@/components/RenderLayout/RenderLayout";
+import ThemeProvider from "@/components/ThemeProvider/ThemeProvider";
 
 import "../styles/globals.css";
-
-const nunito = Nunito({ subsets: ["latin"], weight: ["300", "500", "700"] });
-
-// const inter = Inter({ subsets: ["latin"], weight: ["300", "500", "700"] });
 
 export const metadata: Metadata = {
   title: "Choir on Mission",
@@ -22,11 +17,9 @@ export default function RootLayout({
 }>) {
   return (
     <html>
-      <body className={nunito.className}>
-        <PrimeReactProvider value={{ unstyled: true, pt: CMMainTheme }}>
-          {children}
-        </PrimeReactProvider>
-      </body>
+      <ThemeProvider theme="dark">
+        <RenderLayout>{children}</RenderLayout>
+      </ThemeProvider>
     </html>
   );
 }
