@@ -14,7 +14,7 @@ export default function ComingSoonView() {
   const isThemeLight = theme === "light";
 
   const containerClasses = classNames(
-    "container mx-auto p-4 bg-no-repeat bg-contain lg:bg-auto bg-right-bottom h-screen flex flex-col items-center md:block",
+    "container mx-auto p-4 bg-no-repeat bg-contain lg:bg-70% bg-right-bottom h-screen flex flex-col items-center md:block",
     {
       "bg-microphones-black": isThemeLight,
       "bg-microphones-white": !isThemeLight,

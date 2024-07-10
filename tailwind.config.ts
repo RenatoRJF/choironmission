@@ -16,6 +16,12 @@ const config: Config = {
         "microphones-white": "url('/images/microphones-white.svg')",
         "microphones-black": "url('/images/microphones-black.svg')",
       },
+      backgroundSize: {
+        auto: "auto",
+        cover: "cover",
+        contain: "contain",
+        "70%": "70%",
+      },
     },
   },
   plugins: [],
