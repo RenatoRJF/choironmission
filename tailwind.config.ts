@@ -4,14 +4,17 @@ const config: Config = {
   content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
   theme: {
     colors: {
+      white: "#ffffff",
       black: "#161a1d",
+      green: "#34c759",
+      yellow: "#EE9B00",
+      grey: "#757778",
       "light-gray": "#d3d3d3",
     },
     extend: {
       backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "microphones-white": "url('/images/microphones-white.svg')",
+        "microphones-black": "url('/images/microphones-black.svg')",
       },
     },
   },
