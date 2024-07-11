@@ -4,12 +4,17 @@ const config: Config = {
   content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
   theme: {
     colors: {
-      white: "#ffffff",
-      black: "#161a1d",
-      green: "#34c759",
+      grey: "#D3D3D3",
+      night: "#0B090A",
+      white: "#FFFFFF",
+      green: "#34C759",
       yellow: "#EE9B00",
-      grey: "#757778",
+      "dark-grey": "#D3D3D3",
+      "blood-red": "#660708",
+      "Seal Brown": "#4B270F",
       "light-gray": "#d3d3d3",
+      "white-smoke": "#F5F3F4",
+      "eerie-black": "#161A1D",
     },
     extend: {
       backgroundImage: {
