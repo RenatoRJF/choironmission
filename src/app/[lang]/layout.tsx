@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import RenderLayout from "@/components/RenderLayout/RenderLayout";
 import ThemeProvider from "@/components/ThemeProvider/ThemeProvider";
 
-import "../styles/globals.css";
+import "@/styles/globals.css";
 
 export const metadata: Metadata = {
   title: "Choir on Mission",
