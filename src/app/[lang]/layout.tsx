@@ -8,6 +8,9 @@ import "@/styles/globals.css";
 export const metadata: Metadata = {
   title: "Choir on Mission",
   description: "Spreading the love of Jesus through songs.",
+  icons: {
+    icon: "/icon/favicon.ico",
+  },
 };
 
 export default function RootLayout({
