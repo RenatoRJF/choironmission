@@ -39,15 +39,15 @@ export default function ComingSoonView() {
   const soonClasses = classNames(
     "text-[9.38rem] leading-[6rem] transition-colors",
     {
-      "text-dark-grey": isThemeLight,
+      "text-grey": isThemeLight,
       "text-white": !isThemeLight,
     }
   );
 
   const paragraphClasses = classNames(
-    "mt-6 md:mt-12 text-[1rem] md:text-[2rem] text-center md:text-left mx-auto md:mx-0 font-thin max-w-[80%] md:max-w-[448px] leading-5 md:leading-10 transition-colors",
+    "mt-6 md:mt-12 text-[1rem] md:text-[2rem] text-center md:text-left mx-auto md:mx-0 font-extralight max-w-[80%] md:max-w-[448px] leading-5 md:leading-10 transition-colors",
     {
-      "text-eerie-black": isThemeLight,
+      "text-black": isThemeLight,
       "text-white": !isThemeLight,
     }
   );
@@ -56,7 +56,7 @@ export default function ComingSoonView() {
     <main className={containerClasses}>
       <Logo />
 
-      <div className="mt-[4rem] md:mt-[8rem]">
+      <div className="mt-[128px]">
         <h2 className={comingSoonClasses}>
           <span className={comingClasses}>Coming</span>
           <span className={soonClasses}>soon</span>

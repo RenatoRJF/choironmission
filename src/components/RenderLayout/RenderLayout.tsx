@@ -18,7 +18,7 @@ export default function RenderLayout({ children }: { children: ReactNode }) {
   const { theme } = useContext(ThemeContext);
 
   const classes = classNames(`${roboto.className}`, {
-    "bg-eerie-black": theme === "dark",
+    "bg-black": theme === "dark",
     "bg-light-gray": theme === "light",
   });
 
