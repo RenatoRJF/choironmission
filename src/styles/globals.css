@@ -1,6 +1,6 @@
 @layer normalize, tailwind-base, tailwind-utilities;
 
-@import "./normalize.css" layer(normalize);
+@import './normalize.css' layer(normalize);
 
 @layer tailwind-base {
   @tailwind base;

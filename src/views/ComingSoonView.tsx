@@ -1,55 +1,52 @@
-"use client";
+'use client';
 
-import classNames from "classnames";
-import { Bebas_Neue } from "next/font/google";
-import { useContext } from "react";
+import classNames from 'classnames';
+import { Bebas_Neue } from 'next/font/google';
+import { useContext } from 'react';
 
-import Logo from "@/components/Logo/Logo";
-import { ThemeContext } from "@/components/ThemeProvider/ThemeProvider";
+import Logo from '@/components/Logo/Logo';
+import { ThemeContext } from '@/components/ThemeProvider/ThemeProvider';
 
-const nunito = Bebas_Neue({ subsets: ["latin"], weight: ["400"] });
+const nunito = Bebas_Neue({ subsets: ['latin'], weight: ['400'] });
 
 export default function ComingSoonView() {
   const { theme } = useContext(ThemeContext);
-  const isThemeLight = theme === "light";
+  const isThemeLight = theme === 'light';
 
   const containerClasses = classNames(
-    "container mx-auto p-4 bg-no-repeat bg-contain lg:bg-70% bg-right-bottom h-screen flex flex-col items-center md:block",
+    'container mx-auto p-4 bg-no-repeat bg-contain lg:bg-70% bg-right-bottom h-screen flex flex-col items-center md:block',
     {
-      "bg-microphones-black": isThemeLight,
-      "bg-microphones-white": !isThemeLight,
-    }
+      'bg-microphones-black': isThemeLight,
+      'bg-microphones-white': !isThemeLight,
+    },
   );
 
   const comingSoonClasses = classNames(
-    "font-bold flex flex-col gap-6 md:block text-center md:text-left uppercase p-0",
+    'font-bold flex flex-col gap-6 md:block text-center md:text-left uppercase p-0',
     {
       [nunito.className]: true,
-    }
+    },
   );
 
   const comingClasses = classNames(
-    "leading-[4rem] text-[5rem] md:text-[9.38rem] md:leading-[6rem] transition-colors md:me-[2rem]",
+    'leading-[4rem] text-[5rem] md:text-[9.38rem] md:leading-[6rem] transition-colors md:me-[2rem]',
     {
-      "text-green": isThemeLight,
-      "text-yellow": !isThemeLight,
-    }
+      'text-green': isThemeLight,
+      'text-yellow': !isThemeLight,
+    },
   );
 
-  const soonClasses = classNames(
-    "text-[9.38rem] leading-[6rem] transition-colors",
-    {
-      "text-dark-grey": isThemeLight,
-      "text-white": !isThemeLight,
-    }
-  );
+  const soonClasses = classNames('text-[9.38rem] leading-[6rem] transition-colors', {
+    'text-dark-grey': isThemeLight,
+    'text-white': !isThemeLight,
+  });
 
   const paragraphClasses = classNames(
-    "mt-6 md:mt-12 text-[1rem] md:text-[2rem] text-center md:text-left mx-auto md:mx-0 font-thin max-w-[80%] md:max-w-[448px] leading-5 md:leading-10 transition-colors",
+    'mt-6 md:mt-12 text-[1rem] md:text-[2rem] text-center md:text-left mx-auto md:mx-0 font-thin max-w-[80%] md:max-w-[448px] leading-5 md:leading-10 transition-colors',
     {
-      "text-eerie-black": isThemeLight,
-      "text-white": !isThemeLight,
-    }
+      'text-eerie-black': isThemeLight,
+      'text-white': !isThemeLight,
+    },
   );
 
   return (

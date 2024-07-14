@@ -1,17 +1,17 @@
-import { match } from "@formatjs/intl-localematcher";
-import Negotiator from "negotiator";
-import { NextRequest, NextResponse } from "next/server";
+import { match } from '@formatjs/intl-localematcher';
+import Negotiator from 'negotiator';
+import { NextRequest, NextResponse } from 'next/server';
 
-const locales = ["en", "nl", "es", "pt"];
-const defaultLocale = "en";
+const locales = ['en', 'nl', 'es', 'pt'];
+const defaultLocale = 'en';
 
 // Get the preferred locale
 function getLocale(request: NextRequest) {
-  const headers = request.headers.get("accept-language");
+  const headers = request.headers.get('accept-language');
 
   if (headers) {
     const languages = new Negotiator({
-      headers: { "accept-language": headers },
+      headers: { 'accept-language': headers },
     }).languages();
 
     return match(languages, locales, defaultLocale);
@@ -24,7 +24,7 @@ export function middleware(request: NextRequest) {
   // Check if there is any supported locale in the pathname
   const { pathname } = request.nextUrl;
   const pathnameHasLocale = locales.some(
-    (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
+    (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`,
   );
 
   if (pathnameHasLocale) return;
@@ -40,7 +40,7 @@ export function middleware(request: NextRequest) {
 export const config = {
   matcher: [
     // Skip all internal paths (_next)
-    "/((?!_next|images|icon).*)",
+    '/((?!_next|images|icon).*)',
     // Optional: only run on root (/) URL
     // '/'
   ],
