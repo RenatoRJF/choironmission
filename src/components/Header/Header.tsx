@@ -1,7 +1,9 @@
+import Logo from "@/components/Logo/Logo";
+
 export default function Header() {
   return (
-    <header>
-      <h1>Logo</h1>
+    <header className="flex items-center py-6">
+      <Logo />
     </header>
   );
 }
