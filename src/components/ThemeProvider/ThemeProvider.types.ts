@@ -1,6 +1,6 @@
-import { Dispatch, ReactNode, SetStateAction } from "react";
+import { Dispatch, ReactNode, SetStateAction } from 'react';
 
-import { ThemeVariant } from "@/@types/theme";
+import { ThemeVariant } from '@/@types/theme';
 
 export interface ThemeProviderProps {
   theme: ThemeVariant;
