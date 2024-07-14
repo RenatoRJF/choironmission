@@ -1,12 +1,12 @@
-"use client";
+'use client';
 
-import { yupResolver } from "@hookform/resolvers/yup";
-import { Button } from "primereact/button";
-import { InputText } from "primereact/inputtext";
-import { SubmitHandler, useForm } from "react-hook-form";
+import { yupResolver } from '@hookform/resolvers/yup';
+import { Button } from 'primereact/button';
+import { InputText } from 'primereact/inputtext';
+import { SubmitHandler, useForm } from 'react-hook-form';
 
-import { NewsletterSchema } from "./NewsletterForm.schema";
-import { NewsletterFormData } from "./NewsletterForm.types";
+import { NewsletterSchema } from './NewsletterForm.schema';
+import { NewsletterFormData } from './NewsletterForm.types';
 
 export default function NewsletterForm() {
   const { register, handleSubmit } = useForm<NewsletterFormData>({
@@ -19,7 +19,7 @@ export default function NewsletterForm() {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="flex items-center gap-2">
-      <InputText {...register("email")} />
+      <InputText {...register('email')} />
 
       <Button type="submit">Subscribe</Button>
     </form>
