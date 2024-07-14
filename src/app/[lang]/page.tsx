@@ -1,5 +1,5 @@
-import ComingSoonView from "@/views/ComingSoonView";
+import MainView from "@/views/MainView";
 
 export default function Home() {
-  return <ComingSoonView />;
+  return <MainView />;
 }
